@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href=".css">
+</head>
+<body>
+  <button id="showCookieModal">Toon Cookiewall</button>
+  <div id="cookieModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeCookieModal">&times;</span>
+      <h2>Leeftijdsverificatie</h2>
+      <p>Vul je leeftijd in om door te gaan:</p>
+      <input type="number" id="ageInput" placeholder="Leeftijd">
+      <button id="verifyAge">Verifieer</button>
+    </div>
+  </div>
+
+  <div id="tooYoungPage" class="error-page">
+    <h1>Helaas, je bent te jong</h1>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
