@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Winkelmand</title>
+</head>
+<body>
+    <h1>Winkelmand Opdrachten</h1>
+
+    <script>
+        // Opdracht 1
+        let winkelmandje = ["Bananen", "Whiskey", "Chips", "Bonen", "Aardappelen"];
+        let winkelmandLengte = winkelmandje.length;
+
+        // Opdracht 2
+        document.body.innerHTML += `<p>Uw producten zijn: ${winkelmandje.join(", ")}</p>`;
+
+        // Opdracht 3
+        let vierdeProduct = winkelmandje[3];
+        document.body.innerHTML += `<p>${vierdeProduct} staat op de vierde plek in uw winkelmand.</p>`;
+
+        // Opdracht 4
+        winkelmandje[1] = "Bier";
+
+        // Opdracht 5
+        function add_product(product) {
+            winkelmandje.push(product);
+            document.body.innerHTML += `<p>Product toegevoegd: ${product}</p>`;
+            document.body.innerHTML += `<p>Uw nieuwe winkelmand: ${winkelmandje.join(", ")}</p>`;
+        }
+
+        // Opdracht 6
+        if (winkelmandLengte > 1) {
+            document.body.innerHTML += `<p>Uw producten zijn: ${winkelmandje.join(", ")}</p>`;
+        } else {
+            document.body.innerHTML += `<p>U heeft niet genoeg producten om te tonen.</p>`;
+        }
+
+        // Opdracht 7
+        if (winkelmandje[4] === "Drop") {
+            document.body.innerHTML += `<p>Uw producten zijn: ${winkelmandje.join(", ")}</p>`;
+        } else {
+            document.body.innerHTML += `<p>U heeft geen drop.</p>`;
+        }
+
+        // Opdracht 8
+        document.body.innerHTML += `<p>Uw producten zijn: ${winkelmandje.join(", ")}</p>`;
+
+        // Opdracht 9
+        let oudeWinkelmand = winkelmandje.slice();
+        winkelmandje.splice(0, 2);
+        document.body.innerHTML += `<p>Oude winkelmand: ${oudeWinkelmand.join(", ")}</p>`;
+        document.body.innerHTML += `<p>Nieuwe winkelmand: ${winkelmandje.join(", ")}</p>`;
+
+        // Opdracht 10
+        winkelmandje.sort();
+        document.body.innerHTML += `<p>Winkelmand gesorteerd: ${winkelmandje.join(", ")}</p>`;
+    </script>
+
+    <!-- Opdracht 5 -->
+    <button onclick="add_product('Nieuw Product')">Product toevoegen</button>
+</body>
+</html>
