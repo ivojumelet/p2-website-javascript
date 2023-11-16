@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="2.4.css">
+    <title>Bewegend Div-element</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+    <h1>Bewegend Div-element</h1>
+
+    <div id="bewegendDiv"></div>
+
+    <script>
+        var bewegendDiv = document.getElementById("bewegendDiv");
+        var positie = 0;
+        var richting = 1; 
+
+        function beweegDiv() {
+
+            positie += 2 * richting; 
+
+
+            if (positie >= window.innerWidth - 50) {
+                richting = -1; 
+            }
+
+
+            if (positie <= 0) {
+                richting = 1; 
+            }
+
+
+            bewegendDiv.style.left = positie + "px";
+        }
+
+
+        setInterval(beweegDiv, 50);
+    </script>
+</body>
+</html>
